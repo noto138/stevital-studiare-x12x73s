@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Steve's Italian Language Learning Apps</title>
+    <title>Steve's Italian Language Learning Tools</title>
     <style>
         * {
             margin: 0;
@@ -84,6 +84,75 @@
             opacity: 0.9;
         }
 
+        .language-toggle {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .toggle-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .toggle-label input[type="checkbox"] {
+            display: none;
+        }
+
+        .toggle-slider {
+            position: relative;
+            width: 50px;
+            height: 26px;
+            background: #ccc;
+            border-radius: 13px;
+            transition: background 0.3s;
+        }
+
+        .toggle-slider::before {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: white;
+            top: 3px;
+            left: 3px;
+            transition: transform 0.3s;
+        }
+
+        .toggle-label input[type="checkbox"]:checked + .toggle-slider {
+            background: #667eea;
+        }
+
+        .toggle-label input[type="checkbox"]:checked + .toggle-slider::before {
+            transform: translateX(24px);
+        }
+
+        .toggle-text {
+            font-weight: bold;
+            color: #333;
+        }
+
+        /* Language visibility control */
+        .lang-en {
+            display: block;
+        }
+
+        .lang-it {
+            display: none;
+        }
+
+        /* When Italian-only mode is active */
+        body.italian-mode .lang-en {
+            display: none;
+        }
+
+        body.italian-mode .lang-it {
+            display: block;
+        }
+
         @media (max-width: 600px) {
             .container {
                 padding: 25px;
@@ -103,25 +172,54 @@
     <div class="container">
         <h1>Steve's Italian Language Learning Tools</h1>
         
+        <div class="language-toggle">
+            <label class="toggle-label">
+                <input type="checkbox" id="languageToggle">
+                <span class="toggle-slider"></span>
+                <span class="toggle-text">
+                    <span class="lang-en">Show Italian Only</span>
+                    <span class="lang-it">Mostra Solo Italiano</span>
+                </span>
+            </label>
+        </div>
+        
         <div class="app-grid">
             <div class="app-card">
-                <h2>Random Word Practice</h2>
-                <p>Practice Italian vocabulary with randomly selected words from categorized lists (nouns, verbs, adjectives, etc.). Use the random words to create sentences and improve your conversation skills.</p>
+                <h2 class="lang-en">Random Word Practice</h2>
+                <h2 class="lang-it">Pratica con Parole Casuali</h2>
+                <p class="lang-en">Practice Italian vocabulary with randomly selected words from categorized lists (nouns, verbs, adjectives, etc.). Use the random words to create sentences and improve your conversation skills.</p>
+                <p class="lang-it">Pratica il vocabolario italiano con parole selezionate casualmente da liste categorizzate (sostantivi, verbi, aggettivi, ecc.). Usa le parole casuali per creare frasi e migliorare le tue capacità di conversazione.</p>
                 <a href="https://noto138.github.io/italvocab-study-k8x2m/" class="app-link" target="_blank">Launch App →</a>
             </div>
 
             <div class="app-card">
-                <h2>Verb Conjugation Practice</h2>
-                <p>Master Italian verb conjugations across all tenses. Practice with progressive difficulty levels from basic present tense to advanced subjunctive and conditional forms.</p>
+                <h2 class="lang-en">Verb Conjugation Practice</h2>
+                <h2 class="lang-it">Pratica di Coniugazione dei Verbi</h2>
+                <p class="lang-en">Master Italian verb conjugations across all tenses. Practice with progressive difficulty levels from basic present tense to advanced subjunctive and conditional forms.</p>
+                <p class="lang-it">Padroneggia le coniugazioni dei verbi italiani in tutti i tempi. Pratica con livelli di difficoltà progressivi dal presente di base al congiuntivo e condizionale avanzati.</p>
                 <a href="https://noto138.github.io/ital_con_9935276/" class="app-link" target="_blank">Launch App →</a>
             </div>
 
             <div class="app-card">
-                <h2>Conversation Practice</h2>
-                <p>Build complete Italian sentences using guided prompts and random word combinations. Develop your ability to construct natural, flowing conversations in Italian.</p>
+                <h2 class="lang-en">Conversation Practice</h2>
+                <h2 class="lang-it">Pratica di Conversazione</h2>
+                <p class="lang-en">Build complete Italian sentences using guided prompts and random word combinations. Develop your ability to construct natural, flowing conversations in Italian.</p>
+                <p class="lang-it">Costruisci frasi italiane complete usando suggerimenti guidati e combinazioni di parole casuali. Sviluppa la tua capacità di costruire conversazioni naturali e fluide in italiano.</p>
                 <a href="https://noto138.github.io/italsentences-hgeu7yt6/" class="app-link" target="_blank">Launch App →</a>
             </div>
         </div>
     </div>
+
+    <script>
+        const toggle = document.getElementById('languageToggle');
+        
+        toggle.addEventListener('change', function() {
+            if (this.checked) {
+                document.body.classList.add('italian-mode');
+            } else {
+                document.body.classList.remove('italian-mode');
+            }
+        });
+    </script>
 </body>
 </html>
