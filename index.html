@@ -37,6 +37,23 @@
             font-size: 2em;
         }
 
+        .title-it {
+            display: block;
+            font-size: 0.6em;
+            color: #667eea;
+            margin-top: 5px;
+        }
+
+        body.italian-mode .title-en {
+            display: none;
+        }
+
+        body.italian-mode .title-it {
+            font-size: 1em;
+            color: #333;
+            margin-top: 0;
+        }
+
         .app-grid {
             display: flex;
             flex-direction: column;
@@ -136,21 +153,32 @@
         }
 
         /* Language visibility control */
+        /* By default (toggle OFF): show both languages */
         .lang-en {
             display: block;
         }
 
         .lang-it {
-            display: none;
+            display: block;
+            font-style: italic;
+            color: #555;
+            margin-top: 8px;
         }
 
-        /* When Italian-only mode is active */
+        /* When Italian-only mode is active (toggle ON) */
         body.italian-mode .lang-en {
             display: none;
         }
 
         body.italian-mode .lang-it {
             display: block;
+            font-style: normal;
+            color: #666;
+            margin-top: 0;
+        }
+
+        body.italian-mode .app-card h2.lang-it {
+            color: #667eea;
         }
 
         @media (max-width: 600px) {
@@ -170,7 +198,10 @@
 </head>
 <body>
     <div class="container">
-        <h1>Steve's Italian Language Learning Tools</h1>
+        <h1>
+            <span class="title-en">Steve's Italian Language Learning Tools</span>
+            <span class="title-it">Strumenti per l'Apprendimento dell'Italiano di Steve</span>
+        </h1>
         
         <div class="language-toggle">
             <label class="toggle-label">
@@ -189,7 +220,10 @@
                 <h2 class="lang-it">Pratica con Parole Casuali</h2>
                 <p class="lang-en">Practice Italian vocabulary with randomly selected words from categorized lists (nouns, verbs, adjectives, etc.). Use the random words to create sentences and improve your conversation skills.</p>
                 <p class="lang-it">Pratica il vocabolario italiano con parole selezionate casualmente da liste categorizzate (sostantivi, verbi, aggettivi, ecc.). Usa le parole casuali per creare frasi e migliorare le tue capacità di conversazione.</p>
-                <a href="https://noto138.github.io/italvocab-study-k8x2m/" class="app-link" target="_blank">Launch App →</a>
+                <a href="https://noto138.github.io/italvocab-study-k8x2m/" class="app-link" target="_blank">
+                    <span class="lang-en">Launch App →</span>
+                    <span class="lang-it">Avvia App →</span>
+                </a>
             </div>
 
             <div class="app-card">
@@ -197,7 +231,10 @@
                 <h2 class="lang-it">Pratica di Coniugazione dei Verbi</h2>
                 <p class="lang-en">Master Italian verb conjugations across all tenses. Practice with progressive difficulty levels from basic present tense to advanced subjunctive and conditional forms.</p>
                 <p class="lang-it">Padroneggia le coniugazioni dei verbi italiani in tutti i tempi. Pratica con livelli di difficoltà progressivi dal presente di base al congiuntivo e condizionale avanzati.</p>
-                <a href="https://noto138.github.io/ital_con_9935276/" class="app-link" target="_blank">Launch App →</a>
+                <a href="https://noto138.github.io/ital_con_9935276/" class="app-link" target="_blank">
+                    <span class="lang-en">Launch App →</span>
+                    <span class="lang-it">Avvia App →</span>
+                </a>
             </div>
 
             <div class="app-card">
@@ -205,7 +242,10 @@
                 <h2 class="lang-it">Pratica di Conversazione</h2>
                 <p class="lang-en">Build complete Italian sentences using guided prompts and random word combinations. Develop your ability to construct natural, flowing conversations in Italian.</p>
                 <p class="lang-it">Costruisci frasi italiane complete usando suggerimenti guidati e combinazioni di parole casuali. Sviluppa la tua capacità di costruire conversazioni naturali e fluide in italiano.</p>
-                <a href="https://noto138.github.io/italsentences-hgeu7yt6/" class="app-link" target="_blank">Launch App →</a>
+                <a href="https://noto138.github.io/italsentences-hgeu7yt6/" class="app-link" target="_blank">
+                    <span class="lang-en">Launch App →</span>
+                    <span class="lang-it">Avvia App →</span>
+                </a>
             </div>
         </div>
     </div>
