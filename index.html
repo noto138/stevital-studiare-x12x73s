@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steve's Italian Language Learning Tools</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 800px;
+            width: 100%;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2em;
+        }
+
+        .app-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .app-card {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 25px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: 2px solid #e0e0e0;
+        }
+
+        .app-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            border-color: #667eea;
+        }
+
+        .app-card h2 {
+            color: #667eea;
+            margin-bottom: 12px;
+            font-size: 1.5em;
+        }
+
+        .app-card p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .app-link {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            padding: 12px 30px;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: opacity 0.2s;
+        }
+
+        .app-link:hover {
+            opacity: 0.9;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 25px;
+            }
+
+            h1 {
+                font-size: 1.5em;
+            }
+
+            .app-card h2 {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Steve's Italian Language Learning Tools</h1>
+        
+        <div class="app-grid">
+            <div class="app-card">
+                <h2>Random Word Practice</h2>
+                <p>Practice Italian vocabulary with randomly selected words from categorized lists (nouns, verbs, adjectives, etc.). Use the random words to create sentences and improve your conversation skills.</p>
+                <a href="https://noto138.github.io/italvocab-study-k8x2m/" class="app-link" target="_blank">Launch App →</a>
+            </div>
+
+            <div class="app-card">
+                <h2>Verb Conjugation Practice</h2>
+                <p>Master Italian verb conjugations across all tenses. Practice with progressive difficulty levels from basic present tense to advanced subjunctive and conditional forms.</p>
+                <a href="https://noto138.github.io/ital_con_9935276/" class="app-link" target="_blank">Launch App →</a>
+            </div>
+
+            <div class="app-card">
+                <h2>Conversation Practice</h2>
+                <p>Build complete Italian sentences using guided prompts and random word combinations. Develop your ability to construct natural, flowing conversations in Italian.</p>
+                <a href="https://noto138.github.io/italsentences-hgeu7yt6/" class="app-link" target="_blank">Launch App →</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
